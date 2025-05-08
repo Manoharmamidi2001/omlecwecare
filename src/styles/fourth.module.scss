@@ -1,0 +1,147 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
+  margin: 50px 0;
+  gap: 40px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 1200px) {
+    padding: 0 60px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 30px;
+    gap: 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 20px; // Further reduce padding for smaller screens
+    gap: 20px;
+  }
+}
+
+.header {
+  text-align: left;
+
+  h1 {
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 500;
+
+    &:first-child {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem; // Adjust font size for tablets
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1rem; // Further reduce font size for mobile
+      }
+    }
+
+    &:last-child {
+      font-size: 2.8rem;
+      font-weight: 700;
+
+      @media (max-width: 768px) {
+        font-size: 2rem; // Adjust font size for tablets
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1rem; // Further reduce font size for mobile
+      }
+    }
+  }
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // 2 cards per row for tablets
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr); // 2 cards per row for mobile
+    gap: 10px; // Reduce gap for smaller screens
+  }
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.imageContainer {
+  position: relative; // required for Image with fill
+  width: 200px;
+  max-width: 200px;
+  aspect-ratio: 4 / 3; // maintain consistent aspect ratio
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  .image {
+    object-fit: contain;
+    border-radius: 12px;
+  }
+
+  @media (max-width: 768px) {
+    width: 150px; // Reduce width for tablets
+    max-width: 150px;
+  }
+
+  @media (max-width: 480px) {
+    width: 120px; // Further reduce width for mobile
+    max-width: 120px;
+  }
+}
+
+.serviceTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  transition: color 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem; // Adjust font size for tablets
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem; // Further reduce font size for mobile
+  }
+}
+
+.serviceCardP {
+  font-size: 1.2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem; // Adjust font size for tablets
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem; // Further reduce font size for mobile
+  }
+}

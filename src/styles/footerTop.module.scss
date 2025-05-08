@@ -1,0 +1,133 @@
+.container {
+  display: flex;
+  align-items: center; // Vertically center items
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 50px;
+  padding: 2rem; // Add padding
+  box-sizing: border-box; // Ensure padding is included in the total width
+  justify-content: space-between;
+  opacity: 90%;
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h2 {
+    font-size: 3.2rem; // Default font size for desktop
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  p {
+    font-size: 1.2rem; // Default font size for desktop
+    color: #666;
+    margin: 0;
+  }
+}
+
+.last {
+  display: flex;
+  justify-content: end; // Align items to the right
+  width: 100%; // Ensure it takes full width
+  gap: 1rem; // Space between input and button
+
+  input {
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    min-width: 300px;
+
+    &:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+  }
+
+  button {
+    background-color: #cd2f71;
+    color: white;
+    border: none;
+    padding: 0 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken(#3498db, 10%);
+    }
+  }
+}
+
+// Mobile and tablet responsive adjustments
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center; // Center align items for smaller screens
+    padding: 1.5rem; // Reduce padding for tablets
+  }
+
+  .first {
+    margin-bottom: 1.5rem;
+
+    h2 {
+      font-size: 2.2rem; // Reduce font size for tablets
+    }
+
+    p {
+      font-size: 1rem; // Reduce font size for tablets
+    }
+  }
+
+  .last {
+    flex-direction: column; // Stack the input and button vertically
+    gap: 1rem; // Space between input and button
+    width: 100%;
+
+    input {
+      min-width: auto;
+      flex-grow: 1;
+      font-size: 0.9rem; // Reduce font size for tablets
+      padding: 12px 15px; // Adjust padding for tablets
+    }
+
+    button {
+      font-size: 0.9rem; // Reduce font size for tablets
+      padding: 10px 20px; // Adjust padding for tablets
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem; // Further reduce padding for mobile
+  }
+
+  .first {
+    h2 {
+      font-size: 1.8rem; // Further reduce font size for mobile
+    }
+
+    p {
+      font-size: 0.9rem; // Further reduce font size for mobile
+    }
+  }
+
+  .last {
+    input {
+      font-size: 0.8rem; // Further reduce font size for mobile
+      padding: 10px 12px; // Adjust padding for mobile
+    }
+
+    button {
+      font-size: 0.8rem; // Further reduce font size for mobile
+      padding: 8px 15px; // Adjust padding for mobile
+    }
+  }
+}

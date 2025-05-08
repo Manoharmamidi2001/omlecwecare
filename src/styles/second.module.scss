@@ -1,0 +1,27 @@
+.container {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    @media (max-width: 1024px) {
+        font-size: 1.3rem; // Adjust font size for tablets
+        line-height: 1.6; // Adjust line height for tablets
+        padding-left: 50px; // Reduce padding for tablets
+        padding-right: 50px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.1rem; // Adjust font size for mobile
+        line-height: 1.5; // Adjust line height for mobile
+        padding-left: 20px; // Reduce padding for mobile
+        padding-right: 20px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.6rem; // Reduced for mobile view
+        line-height: 1.4; // Adjust line height for smaller mobile screens
+        padding-left: 20px; // Minimize padding for smaller screens
+        padding-right: 10px;
+    }
+}

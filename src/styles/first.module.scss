@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+  align-items: flex-start;
+  margin-top: 50px;
+  padding: 0 0 0 100px;
+
+  @media (max-width: 1024px) {
+    padding: 0 0 0 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+    flex-direction: row;
+  }
+}
+
+.textContent {
+  flex: 1;
+
+  @media (max-width: 768px) {
+    padding: 0;
+    margin-top: 0;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 40%;
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    width: 40%; // Adjust width for tablets
+    height: 350px; // Adjust height for tablets
+  }
+
+  @media (max-width: 768px) {
+    width: 35%; // Adjust width for mobile
+    height: 300px; // Adjust height for mobile
+  }
+
+  @media (max-width: 480px) {
+    width: 50%; // Full width for smaller mobile screens
+    height: 150px; // Reduced height for smaller mobile screens
+  }
+}
+
+.mainTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 55px;
+
+  @media (max-width: 1024px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.9rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size:1rem; // Reduced for mobile view
+    line-height: 1.5;
+  }
+}
+
+.tagline {
+  font-size: 2rem;
+  color: rgb(248, 15, 175);
+  margin-top: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem; // Reduced for mobile view
+    margin-top: 0px;
+  }
+}
+
+.aboutSection {
+  max-width: 80%;
+  margin-top: 15px;
+
+  @media (max-width: 768px) {
+    max-width: 80%;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 100%; // Adjusted for mobile view
+    margin-top: 5px;
+  }
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem; // Reduced for mobile view
+  }
+}
+
+.description {
+  font-size: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.6rem; // Reduced for mobile view
+    line-height: 1.4; // Adjusted for mobile view
+  }
+}

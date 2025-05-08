@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: row; // Keep desktop layout
+    gap: 30px; // Reduce gap between items
+    padding-left: 20px; // Adjust padding for smaller screens
+    padding-right: 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding-left: 20px; // Further reduce padding for smaller mobile screens
+    padding-right: 20px;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 50%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    width: 40%; // Adjust width for tablets
+    height: 300px; // Adjust height for tablets
+  }
+
+  @media (max-width: 480px) {
+    width: 60%; // Adjust width for smaller mobile screens
+    height: 200px; // Further reduce height for mobile screens
+  }
+}
+
+.textContent {
+  flex: 1;
+  @media (max-width: 768px) {
+    text-align: left; // Keep text aligned to the left
+  }
+  @media (max-width: 480px) {
+    text-align: left; // Keep text aligned to the left
+  }
+}
+
+.title {
+  font-size: 2.8rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  font-weight: 700;
+
+  @media (max-width: 768px) {
+    font-size: 2rem; // Adjust font size for tablets
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem; // Further reduce font size for mobile screens
+  }
+}
+
+.description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  max-width: 90%;
+
+  @media (max-width: 768px) {
+    max-width: 100%; // Allow full width for smaller screens
+    font-size: 1.2rem; // Adjust font size for tablets
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.6rem; // Further reduce font size for mobile screens
+    line-height: 1.4; // Adjust line height for better readability
+  }
+}

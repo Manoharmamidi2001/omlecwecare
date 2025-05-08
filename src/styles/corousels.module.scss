@@ -1,0 +1,260 @@
+.container {
+  margin-top: 50px;
+  padding: 0 100px;
+
+  @media (max-width: 1200px) {
+    padding: 0 50px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 30px;
+    margin-top: 30px;
+  }
+  @media (max-width: 480px) {
+    padding: 0 15px;
+  }
+
+  .top {
+    padding-left: 20px;
+    text-align: left;
+
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 1rem;
+      color: rgb(255, 112, 136);
+
+      @media (max-width: 1200px) {
+        font-size: 3.8rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 3rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 2rem;
+
+      @media (max-width: 1200px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    margin-top: 3rem;
+    position: relative;
+  }
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.testimonialCard {
+  min-width: 100%;
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  align-items: stretch;
+
+  @media (max-width: 992px) {
+    flex-direction: row !important;
+  }
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
+}
+
+.imageContainer {
+  flex: 1;
+  max-width: 500px;
+  height: auto;
+  min-height: 400px;
+
+  .doctorImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 1200px) {
+    min-height: 350px;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    min-height: 180px;
+  }
+
+  @media (max-width: 400px) {
+    min-height: 160px;
+  }
+}
+
+.contentContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 50px;
+  justify-content: center;
+
+  @media (max-width: 1200px) {
+    padding: 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px;
+  }
+}
+
+.feedback {
+  font-size: 2.5rem;
+  margin-top: 10px;
+
+  @media (max-width: 1200px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+  }
+}
+
+.div {
+  display: flex;
+}
+
+.quetoes {
+  color: rgb(246, 99, 123);
+  font-size: 80px;
+  line-height: 0.8;
+  margin-right: 15px;
+
+  @media (max-width: 1200px) {
+    font-size: 70px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 40px;
+    margin-right: 10px;
+  }
+}
+
+.patientInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+
+  .patientImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-left: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 480px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .patientData {
+    margin-left: 1rem;
+
+    h3 {
+      font-size: 1.8rem;
+      margin: 0;
+      margin-bottom: 0.3rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.3rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.7rem;
+      }
+    }
+
+    .package {
+      color: #3498db;
+      font-size: 1.3rem;
+      font-weight: 500;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &.activeDot {
+    background-color: #3498db;
+  }
+}

@@ -1,0 +1,146 @@
+.heroContainer {
+  background-image: url('../assets/bg.png');
+  background-size: 80%; /* Scale the image beyond the container */
+  background-repeat: no-repeat;
+  background-position: calc(100% + 120px) center; /* Push 100px outside */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* Prevent scrollbars from showing */
+  margin-top: -45px; /* Default margin-top for desktop */
+  gap: 10px;
+}
+
+.content {
+  width: 50%;
+  margin-top: 60px;
+  margin-left: 75px;
+
+  h2 {
+    font-size: 4.5rem;
+  }
+
+  p {
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+
+  button {
+    background-color: rgb(255, 112, 112);
+    width: 400px;
+    border: 0px;
+    font-size: 1.7rem;
+    padding: 20px;
+    margin-top: 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+}
+
+.pera {
+  width: 50%;
+}
+
+
+// Tablet view adjustments
+@media (max-width: 1024px) {
+  .heroContainer {
+    margin-top: 0; /* Decrease margin-top for tablets */
+    background-position: calc(100% + 80px) top; /* Push 100px outside */
+    height: 100%;
+  }
+
+  .content {
+    width: 70%; /* Adjust width for smaller screens */
+    margin-left: 20px; /* Reduce left margin */
+
+    h2 {
+      font-size: 4rem; /* Reduce font size for tablets */
+    }
+
+    p {
+      font-size: 1.2rem; /* Reduce font size for tablets */
+      margin-top: 10px;
+    }
+
+    button {
+      width: 300px; /* Reduce button width for tablets */
+      font-size: 1.5rem; /* Reduce button font size for tablets */
+      padding: 15px; /* Adjust padding for tablets */
+      margin-top: 20px;
+    }
+  }
+
+  .pera {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+}
+
+// Tablet view adjustments
+@media (max-width: 768px) {
+  .heroContainer {
+    margin-top: 0; /* Decrease margin-top for tablets */
+    background-position: calc(100% + 80px) top; /* Push 100px outside */
+    height: 100%;
+  }
+
+  .content {
+    width: 55%; /* Adjust width for smaller screens */
+    margin-left: 20px; /* Reduce left margin */
+
+    h2 {
+      font-size: 2.5rem; /* Reduce font size for tablets */
+    }
+
+    p {
+      font-size: 1.5rem; /* Reduce font size for tablets */
+      margin-top: 10px;
+    }
+
+    button {
+      width: 300px; /* Reduce button width for tablets */
+      font-size: 1.5rem; /* Reduce button font size for tablets */
+      padding: 15px; /* Adjust padding for tablets */
+      margin-top: 20px;
+    }
+  }
+
+  .pera {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+}
+
+// Mobile view adjustments
+@media (max-width: 480px) {
+  .heroContainer {
+    margin-top: 0; /* Decrease margin-top for mobile */
+    background-position: calc(100% + 50px) top; /* Adjust background position for mobile */
+    gap: 5px; /* Reduce gap for mobile */
+  }
+
+  .content {
+    margin-top: 10px; /* Decrease margin-top for mobile */
+    width: 50%; /* Full width for mobile */
+    margin-left: 10px; /* Reduce left margin for mobile */
+
+    h2 {
+      font-size: 1.2rem; /* Further reduce font size for mobile */
+    }
+
+    p {
+      font-size: 0.8rem; /* Further reduce font size for mobile */
+    }
+
+    button {
+      width: 120px; /* Further reduce button width for mobile */
+      font-size: 0.5rem; /* Further reduce button font size for mobile */
+      padding: 10px; /* Adjust padding for mobile */
+    }
+  }
+
+  .pera {
+    width: 100%; /* Full width for mobile */
+  }
+}

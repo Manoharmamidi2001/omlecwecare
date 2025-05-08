@@ -1,0 +1,204 @@
+.doctorsSection {
+  text-align: center;
+  margin-top: 50px;
+
+  
+  @media (max-width: 1024px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    color: rgb(241, 102, 125);
+
+    @media (max-width: 768px) {
+      font-size: 3rem; // Reduce font size for tablets
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2.5rem; // Further reduce font size for mobile
+    }
+  }
+}
+
+.doctorsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1.5rem;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr); // 3 cards per row for tablets
+    justify-content: center;// Removed right padding for tablets
+    gap: 0.1rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr); // 1 card per row on mobile
+    gap: 2rem;
+  }
+}
+
+.doctorCard {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+  @media (max-width: 768px) {
+    min-height: 300px; // Reduce card height for tablets
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: row-reverse; // Image on the right side
+    min-height: 150px; // Adjust height for mobile
+    align-items: center;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+
+  @media (max-width: 768px) {
+    height: 250px; // Reduce image height for tablets
+  }
+
+  @media (max-width: 480px) {
+    width: 40%; // Image takes 40% of the card width
+    height: 100%; // Full height of the card
+  }
+}
+
+.doctorImage {
+  object-fit: cover;
+  object-position: center;
+  background-color: rgba(255, 212, 219, 0.724);
+
+  @media (max-width: 768px) {
+    border-radius: 10px 10px 0 0; // Match desktop border radius for tablets
+  }
+
+  @media (max-width: 480px) {
+    border-radius: 0 10px 10px 0; // Adjust border radius for horizontal layout
+  }
+}
+
+.cardContent {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    padding: 1rem; // Reduce padding for tablets
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem; // Reduce padding for mobile
+  }
+}
+
+.doctorCard h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: rgb(241, 102, 125);
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem; // Reduce font size for tablets
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem; // Further reduce font size for mobile
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem; // Reduce font size for tablets
+    font-weight: bold;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem; // Further reduce font size for mobile
+  }
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem; // Reduce font size for tablets
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem; // Further reduce font size for mobile
+  }
+}
+
+.socialPopup {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(241, 102, 125, 0.9);
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 10px 10px 0 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+
+  svg {
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  svg:hover {
+    transform: scale(1.2);
+  }
+}
+
+.doctorCard:hover .socialPopup {
+  opacity: 1;
+  visibility: visible;
+}
+
+.doctorCard:hover .emailPopup {
+  opacity: 1;
+  visibility: visible;
+}
