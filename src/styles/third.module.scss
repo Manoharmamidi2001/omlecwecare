@@ -17,6 +17,9 @@
   @media (max-width: 480px) {
     padding-left: 20px; // Further reduce padding for smaller mobile screens
     padding-right: 20px;
+    margin-top: 10px;
+    gap: 5px;
+    align-items: center;
   }
 }
 
@@ -34,8 +37,8 @@
   }
 
   @media (max-width: 480px) {
-    width: 60%; // Adjust width for smaller mobile screens
-    height: 200px; // Further reduce height for mobile screens
+    width: 50%; // Adjust width for smaller mobile screens
+    height: 150px; // Further reduce height for mobile screens
   }
 }
 
@@ -60,7 +63,9 @@
   }
 
   @media (max-width: 480px) {
-    font-size: 0.8rem; // Further reduce font size for mobile screens
+    font-size: 0.9rem; // Further reduce font size for mobile screens
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -75,7 +80,7 @@
   }
 
   @media (max-width: 480px) {
-    font-size: 0.6rem; // Further reduce font size for mobile screens
+    font-size: 0.7rem; // Further reduce font size for mobile screens
     line-height: 1.4; // Adjust line height for better readability
   }
 }

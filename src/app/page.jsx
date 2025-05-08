@@ -8,7 +8,6 @@ import HomePage from '@/components/HomePage'
 import Doctors from '@/components/MeetDoctors'
 import Second from '@/components/Second'
 import Services from '@/components/Services'
-import Services2 from '@/components/Services2'
 import Third from '@/components/Third'
 import React from 'react'
 
@@ -23,7 +22,6 @@ const Home = () => {
       <Fourth/>
       <Fifith/>
       <Services/>
-      {/* <Services2/> */}
       <Doctors/>
       <Corousels/>
       <Footer/>

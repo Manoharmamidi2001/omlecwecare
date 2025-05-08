@@ -20,6 +20,7 @@
   @media (max-width: 480px) {
     padding: 0 20px; // Further reduce padding for smaller screens
     gap: 20px;
+    margin: 20px 0;
   }
 }
 
@@ -42,6 +43,7 @@
 
       @media (max-width: 480px) {
         font-size: 1rem; // Further reduce font size for mobile
+        line-height: 0;
       }
     }
 
